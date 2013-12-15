@@ -36,7 +36,8 @@
     <div class="row">
       <div class="small-4 columns right">
         <ul class="inline-list right header-links">
-          <li><a href="<?php echo get_permalink( 36 ); ?>">Shop</a></li>
+          <li class="header-list-item"><a class="header-item button tiny" href=<?php echo "\"".home_url()."\""; ?>>Home</a></li>
+          <li class="header-list-item"><a class="header-item button tiny" href="<?php echo get_permalink( 36 ); ?>">Shop</a></li>
         </ul>
       </div>
     </div>

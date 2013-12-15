@@ -1,12 +1,14 @@
 <?php
 /**
- * Will show list of posts
+ * The template for displaying Shop page.
  *
  * @package 102Somerton
  */
-?>
 
-    <div class="large-12 columns">
+get_header(); ?>
+
+<div class="row">
+	<div class="large-12 columns">
  
 	<div class="show-for-small">	
 		<h1 class="entry-title">Shop</h1>
@@ -25,3 +27,5 @@
 	</div><!-- .entry-content -->
   
     </div>
+
+<?php get_footer(); ?>

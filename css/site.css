@@ -40,3 +40,11 @@ Version: 1.0
 .header-somerton {
 	color: darksalmon;
 }
+
+.header-item {
+	margin-bottom: 10px;
+}
+
+.header-list-item {
+	margin-left: 5px !important;
+}
