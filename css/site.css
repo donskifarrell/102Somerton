@@ -1,0 +1,42 @@
+/*
+Theme Name: 102Somerton
+Theme URI: http://www.102Somerton.com
+Author: 102Somerton
+Author URI: http://www.102Somerton.com
+Description: Theme for 102Somerton company site
+Version: 1.0
+*/
+
+.site-title {
+	height: 3em;
+}
+
+.site-home {
+	font-family: 'Baron';
+	font-size: 3em;
+	font-style: oblique;
+}
+
+.bottom-buy {
+	width: 11em;
+}
+
+.somerton-title {
+	font-weight: normal;
+}
+
+.header-links {
+	margin-bottom: 0;
+}
+
+.header-breaker {
+	margin-top: 0;
+}
+
+.header-102 {
+	color: indianred;
+}
+
+.header-somerton {
+	color: darksalmon;
+}

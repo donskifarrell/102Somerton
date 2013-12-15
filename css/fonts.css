@@ -1,0 +1,18 @@
+
+/*
+
+Fonts for use with 102Somerton site
+
+*/
+
+@font-face  {
+   font-family:'Baron';
+   src:url("../fonts/baron/BaronNeueItalic.eot");
+   src: local('☺'),
+      url("../fonts/baron/BaronNeueItalic.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/baron/BaronNeueItalic.woff") format("woff"),
+      url("../fonts/baron/BaronNeueItalic.ttf") format("truetype"),
+      url("../fonts/baron/BaronNeueItalic.svg#ProcionoRegular") format("svg");
+   font-weight:normal;
+   font-style:normal
+}
