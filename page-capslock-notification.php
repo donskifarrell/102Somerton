@@ -35,7 +35,8 @@ get_header(); ?>
 						<div class="row">
 							<div class="large-12 small-12 columns">
 								<h6 class="large-6 small-6 columns subheader">For $1 you get unlimited downloads and access to any future updates!</h6>
-								<a class="large-6 small-6 columns large button success radius" href="<?php echo get_permalink( 36 ); ?>">
+								<a class="large-6 small-6 columns large button success radius" 
+									href="<?php echo get_permalink( 36 ); ?>">
 									Buy
 								</a>
 							</div>

@@ -87,3 +87,18 @@ function Theme_102Somerton_scripts() {
 	wp_enqueue_script( 'JS-102Somerton-foundation', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '20120206', true );
 }
 add_action( 'wp_enqueue_scripts', 'Theme_102Somerton_scripts' );
+
+/**
+ * Redirect to checkout on add to cart
+ */
+function Theme_102Somerton_edd_redirect_to_checout_on_add( $data ) {
+	global $edd_options;
+ 
+	$redirect_url = get_permalink( $edd_options['purchase_page'] );
+ 
+	if ( edd_get_current_page_url() != $redirect_url ) {
+		wp_redirect( $redirect_url, 303 ); 
+		exit;
+	}
+}
+add_action( 'edd_add_to_cart', 'Theme_102Somerton_edd_redirect_to_checout_on_add', 999 );
