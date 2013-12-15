@@ -14,12 +14,12 @@
 	      <hr>
 	      <div class="row">
 	        <div class="large-6 columns">
-	          <p>© Copyright <a href="#">102Somerton Ltd</a></p>
+	          <p>© Copyright <a href="<?php echo get_permalink( get_page_by_path( 'about-contact-us' ) ); ?>">102Somerton Ltd</a></p>
 	        </div>
 
 	        <div class="large-6 columns">
 	          <ul class="inline-list right">
-	            <li><a href="#">Contact Us</a></li>
+	            <li><a href="<?php echo get_permalink( get_page_by_path( 'about-contact-us' ) ); ?>">Contact Us</a></li>
 	          </ul>
 	        </div>
 	      </div>
