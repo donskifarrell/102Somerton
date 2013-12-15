@@ -48,3 +48,15 @@ Version: 1.0
 .header-list-item {
 	margin-left: 5px !important;
 }
+
+.shop-title {
+	margin-bottom: 2em !important;
+}
+
+.edd-cart > .edd-cart-item, .cart_item {
+	list-style-type: none;
+}
+
+.verticalLine {
+    border-left: 1px solid #DDDDDD;
+}
