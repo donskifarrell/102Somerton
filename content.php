@@ -10,7 +10,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php 102Somerton_posted_on(); ?>
+			<?php Theme_102Somerton_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -36,7 +36,7 @@
 			<?php
 				/* translators: used between list items, there is a space after the comma */
 				$categories_list = get_the_category_list( __( ', ', '102Somerton' ) );
-				if ( $categories_list && 102Somerton_categorized_blog() ) :
+				if ( $categories_list && Theme_102Somerton_categorized_blog() ) :
 			?>
 			<span class="cat-links">
 				<?php printf( __( 'Posted in %1$s', '102Somerton' ), $categories_list ); ?>

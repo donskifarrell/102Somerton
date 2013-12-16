@@ -87,7 +87,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php 102Somerton_paging_nav(); ?>
+			<?php Theme_102Somerton_paging_nav(); ?>
 
 		<?php else : ?>
 
