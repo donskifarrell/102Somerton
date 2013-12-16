@@ -13,7 +13,7 @@ get_header(); ?>
 			<div class="show-for-small">	
 				<h1 class="entry-title">Shop</h1>
 			</div>
-			<h4>Click the purchase button to access the CapsLock Notification installation file.</h4>
+			<h4>Here is a selection of our software that is available for you to buy and download.</h4>
 		</div>
 	</div>
 
@@ -21,8 +21,6 @@ get_header(); ?>
 		<div class="large-8 columns">
 
 		 	<div class="entry-content">
-
-
 				<?php echo do_shortcode('[downloads number="15" columns="3"]'); ?>
 				<?php
 					wp_link_pages( array(
