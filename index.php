@@ -14,6 +14,7 @@
 get_header(); ?> 
 
   <div class="row">
+    Uh-oh - Not the right page! 
     <a class="header-item button tiny" href=<?php echo "\"".home_url()."\""; ?>>Home</a>
   </div>
 

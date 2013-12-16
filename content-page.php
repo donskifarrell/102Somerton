@@ -6,7 +6,6 @@
  */
 ?>
 
-
 	<h1 class="entry-title"><?php the_title(); ?></h1>
 	<div class="entry-content">
 		<?php the_content(); ?>
@@ -18,11 +17,3 @@
 		?>
 	</div>
 
-	<script>
-		function stylePurchaseButton() {
-			if (window.jQuery) {  
-			    window.jQuery('#edd-purchase-button').removeClass('gray').addClass('success')
-			}
-		}
-		stylePurchaseButton();
-	</script>

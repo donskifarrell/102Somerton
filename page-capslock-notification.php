@@ -30,7 +30,7 @@ get_header(); ?>
 
 				<div class="row">
 					<div class="large-12 small-12 columns">
-						<h4 class="right">Get it now!</h4>
+						<h4 class="right">Get it now - only $1!</h4>
 						<hr/>
 						<div class="row">
 							<div class="large-12 small-12 columns">
