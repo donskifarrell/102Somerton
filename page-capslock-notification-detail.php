@@ -95,13 +95,12 @@ get_header(); ?>
           </div>
           <!-- End Thumbnails -->
         </div>
+      </div>        
 
-        <div class="row">
-          <div class="small-3 small-centered columns">
-            <h4>Get it now for $1! </h4>
-            <a class="button success radius bottom-buy" href=<?php echo "\"".home_url()."/downloads/caps-lock-notification/\""; ?>>Buy</a>
-          </div>
-        </div>
+      <div class="small-12 small-centered columns text-center">
+        <h4>Get it now for $1! </h4>
+        <a class="button success radius bottom-buy" 
+        	href=<?php echo "\"".home_url()."/downloads/caps-lock-notification/\""; ?>>Buy</a>
       </div>
     </div>
 
