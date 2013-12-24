@@ -7,30 +7,141 @@ Description: Theme for 102Somerton company site
 Version: 1.0
 */
 
-.site-title {
+#wpadminbar {
+	display: none;
+}
+
+
+// Small screens
+@media only screen { 
+
+} /* Define mobile styles */
+
+@media only screen and (max-width: 40em) {
+	.header-title {
+	}
+
+	.header-links {
+		margin-right: 1em;
+	}
+
+	.header-title-link {
+		font-size: 1em;
+	}
+} 
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+// Medium screens
+@media only screen and (min-width: 40.063em) { 
+	.header-title {
+		margin-bottom: -0.5em !important;
+	}
+
+	.header-links {
+		margin-right: 1em;
+	}
+
+	.header-title-link {
+		font-size: 1.5em;
+	}
+} 
+/* min-width 641px, medium screens */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { 
+	.header-title {
+		margin-bottom: -0.5em !important;
+	}
+
+	.header-links {
+		margin-right: 1em;
+	}
+
+	.header-title-link {
+		font-size: 2em;
+	}
+} 
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+// Large screens
+@media only screen and (min-width: 64.063em) { 
+	.header-title {
+		margin-bottom: -0.5em !important;
+	}
+
+	.header-title-link {
+		font-size: 3em;
+	}
+} 
+/* min-width 1025px, large screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { 
+	.header-title {
+		margin-bottom: -1em !important;
+	}
+
+	.header-title-link {
+		font-size: 3em;
+	}
+} 
+/* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
+
+// XLarge screens
+@media only screen and (min-width: 90.063em) {
+	.header-title {
+		margin-bottom: -1em !important;
+	}
+
+	.header-title-link {
+		font-size: 3.2em;
+	}
+} 
+/* min-width 1441px, xlarge screens */
+
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { 
+	.header-title {
+		margin-bottom: -1em !important;
+	}
+
+	.header-title-link {
+		font-size: 3.2em;
+	}
+} 
+/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+
+// XXLarge screens
+@media only screen and (min-width: 120.063em) { 
+	.header-title {
+		margin-bottom: -1em !important;
+		margin-left: -1em;
+	}
+
+	.header-title-link {
+		font-size: 3.5em;
+	}
+} 
+/* min-width 1921px, xlarge screens */
+
+@media only screen and (min-width: 120.063em) and (max-width: 700em) { 
+	.header-title {
+		margin-bottom: -1em !important;
+		margin-left: -1em;
+	}
+
+	.header-title-link {
+		font-size: 3.5em;
+	}
+} 
+/* min-width 1921px, xlarge screens */
+
+
+/*.site-title {
 	height: 3em;
-}
+}*/
 
-.site-home {
+/* Header Title */
+.header-title-link {
 	font-family: 'Baron';
-	font-size: 3em;
 	font-style: oblique;
-}
-
-.bottom-buy {
-	width: 11em;
-}
-
-.somerton-title {
-	font-weight: normal;
-}
-
-.header-links {
-	margin-bottom: 0;
-}
-
-.header-breaker {
-	margin-top: 0;
 }
 
 .header-102 {
@@ -41,6 +152,11 @@ Version: 1.0
 	color: darksalmon;
 }
 
+/* Menu Items */
+.header-links {
+	margin-bottom: 0;
+}
+
 .header-item {
 	margin-bottom: 10px;
 }
@@ -48,6 +164,23 @@ Version: 1.0
 .header-list-item {
 	margin-left: 5px !important;
 }
+
+/* Header Separator */
+.header-breaker {
+	margin-top: 0;
+}
+
+
+
+/*
+.bottom-buy {
+	width: 11em;
+}
+
+.somerton-title {
+	font-weight: normal;
+}
+
 
 .shop-title {
 	margin-bottom: 2em !important;

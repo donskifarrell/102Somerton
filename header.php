@@ -23,30 +23,28 @@
 
 <body <?php body_class(); ?>>
 	<?php do_action( 'before' ); ?>
+  
+  <div class="row">
+    <h1 class="header-title text-center">
+      <a class="header-title-link" href=<?php echo "\"".home_url()."\""; ?>>
+        <span class="header-102">102</span>/<span class="header-somerton">SomeRton</span>          
+      </a>
+    </h1>
+  </div>
 
   <div class="row">
-    <div class="row">
-      <div class="small-1 columns"></div>
-      <div class="small-11 small-centered columns">
-        <h1 class="site-title">
-          <a class="site-home" href=<?php echo "\"".home_url()."\""; ?>>
-            <span class="header-102">102</span>/<span class="header-somerton">SomeRton</span>          
-          </a>
-        </h1>
-      </div>
-    </div>
+    <div class="clearfix">
+      <ul class="inline-list right header-links">
+        <li class="header-list-item">
+          <a class="header-item button tiny" 
+             href=<?php echo "\"".home_url()."\""; ?>>Home</a>
+        </li>
 
-    <div class="row">
-      <div class="small-4 columns right">
-        <ul class="inline-list right header-links">
-          <li class="header-list-item">
-            <a class="header-item button tiny" href=<?php echo "\"".home_url()."\""; ?>>Home</a>
-          </li>
-          <li class="header-list-item">
-            <a class="header-item button tiny" href="<?php echo get_permalink( get_page_by_path( 'shop' ) ); ?>">Shop</a>
-          </li>
-        </ul>
-      </div>
+        <li class="header-list-item">
+          <a class="header-item button tiny" 
+             href="<?php echo get_permalink( get_page_by_path( 'shop' ) ); ?>">Shop</a>
+        </li>
+      </ul>
     </div>
 
     <hr class="header-breaker"/>
