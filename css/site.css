@@ -64,3 +64,17 @@ Version: 1.0
 .verticalLine {
     border-left: 1px solid #DDDDDD;
 }
+
+.lb-outerContainer, .lb-dataContainer {
+    max-width: 420px;
+    width: auto!important;
+    height: auto!important;
+}
+
+.site-imgs {
+	height: 134px;
+}
+
+.pics {
+	outline: none;
+}

@@ -79,19 +79,22 @@ function Theme_102Somerton_scripts() {
 	wp_enqueue_style( 'Style-102Somerton-fonts', get_template_directory_uri() . '/css/fonts.css' );
 	wp_enqueue_style( 'Style-102Somerton-normalize', get_template_directory_uri() . '/css/normalize.css' );
 	wp_enqueue_style( 'Style-102Somerton-foundation', get_template_directory_uri() . '/css/foundation.min.css' );
+	wp_enqueue_style( 'Style-102Somerton-lightbox', get_template_directory_uri() . '/css/colorbox.css' );
 	wp_enqueue_style( 'Style-102Somerton-site', get_template_directory_uri() . '/css/site.css' );
 
 	wp_enqueue_script( 'JS-102Somerton-jQuery', get_template_directory_uri() . '/js/vendor/jquery.js', array(), '20120206', true );
 	wp_enqueue_script( 'JS-102Somerton-jQ-autocomplete', get_template_directory_uri() . '/js/vendor/jquery.autocomplete.js', array(), '20120206', true );
 	wp_enqueue_script( 'JS-102Somerton-jQ-cookie', get_template_directory_uri() . '/js/vendor/jquery.cookie.js', array(), '20120206', true );
+	wp_enqueue_script( 'JS-102Somerton-lightbox', get_template_directory_uri() . '/js/jquery.colorbox-min.js', array('jquery'), '20120206', true );
 	wp_enqueue_script( 'JS-102Somerton-foundation', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '20120206', true );
+	wp_enqueue_script( 'JS-102Somerton-site', get_template_directory_uri() . '/js/site.js', array('jquery'), '20120206', true );
 }
 add_action( 'wp_enqueue_scripts', 'Theme_102Somerton_scripts' );
 
 /**
  * Redirect to checkout on add to cart
  */
-function Theme_102Somerton_edd_redirect_to_checout_on_add( $data ) {
+function Theme_102Somerton_edd_redirect_to_checkout_on_add( $data ) {
 	global $edd_options;
  
 	$redirect_url = get_permalink( $edd_options['purchase_page'] );
@@ -101,4 +104,4 @@ function Theme_102Somerton_edd_redirect_to_checout_on_add( $data ) {
 		exit;
 	}
 }
-add_action( 'edd_add_to_cart', 'Theme_102Somerton_edd_redirect_to_checout_on_add', 999 );
+add_action( 'edd_add_to_cart', 'Theme_102Somerton_edd_redirect_to_checkout_on_add', 999 );
