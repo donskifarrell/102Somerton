@@ -28,6 +28,10 @@ Version: 1.0
 	.header-title-link {
 		font-size: 1em;
 	}
+
+	.about-panel {
+		margin-top: 10px;
+	}
 } 
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 
@@ -44,6 +48,10 @@ Version: 1.0
 	.header-title-link {
 		font-size: 1.5em;
 	}
+
+	.about-panel {
+		margin-top: 10px;
+	}
 } 
 /* min-width 641px, medium screens */
 
@@ -58,6 +66,10 @@ Version: 1.0
 
 	.header-title-link {
 		font-size: 2em;
+	}
+
+	.about-panel {
+		margin-top: 10px;
 	}
 } 
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
@@ -170,7 +182,19 @@ Version: 1.0
 	margin-top: 0;
 }
 
+/* CapsLock Page */
 
+.bottom-buy {
+	width: 11em;
+}
+
+.site-imgs {
+	height: 134px;
+}
+
+.pics {
+	outline: none;
+}
 
 /*
 .bottom-buy {
