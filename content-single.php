@@ -6,15 +6,13 @@
  */
 ?>
 
-    <div class="large-12 columns">
+<div class="large-12 columns">
  
 	<div class="show-for-small">	
-		<h1 class="entry-title">Shop</h1>
+		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</div>
 
  	<div class="entry-content">
- 		<h4>Click the purchase button to access the CapsLock Notification installation file. 
- 		</h4>
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
@@ -22,6 +20,6 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</div>
   
-    </div>
+</div>

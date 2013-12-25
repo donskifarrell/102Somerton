@@ -21,7 +21,7 @@ get_header(); ?>
       <div class="large-6 columns">
         <a class="th pics" 
         	href="<?php echo get_template_directory_uri() . '/images/capslocknotification.png'; ?>" 
-        	data-lightbox="capslock" >
+        	>
           <img
               alt="CapsLock Notification" 
               src="<?php echo get_template_directory_uri() . '/images/capslocknotification.png'; ?>"
@@ -65,7 +65,7 @@ get_header(); ?>
           <!-- Thumbnails -->
 
           <div class="large-4 small-12 columns">
-            <a class="th pics" href="<?php echo get_template_directory_uri() . '/images/notifications.png'; ?>" data-lightbox="capslock" >
+            <a class="th pics" href="<?php echo get_template_directory_uri() . '/images/notifications.png'; ?>">
               <img class="site-imgs"
                   alt="Notifications" 
                   src="<?php echo get_template_directory_uri() . '/images/notifications.png'; ?>"
@@ -75,7 +75,7 @@ get_header(); ?>
           </div>
 
           <div class="large-4 small-12 columns">
-            <a class="th pics" href="<?php echo get_template_directory_uri() . '/images/settings.png'; ?>" data-lightbox="capslock" >
+            <a class="th pics" href="<?php echo get_template_directory_uri() . '/images/settings.png'; ?>">
               <img class="site-imgs"
                   alt="Settings" 
                   src="<?php echo get_template_directory_uri() . '/images/settings.png'; ?>"
@@ -85,7 +85,7 @@ get_header(); ?>
           </div>
 
           <div class="large-4 small-12 columns">           
-            <a class="th pics" href="<?php echo get_template_directory_uri() . '/images/taskbar.png'; ?>" data-lightbox="capslock" >
+            <a class="th pics" href="<?php echo get_template_directory_uri() . '/images/taskbar.png'; ?>" >
               <img class="site-imgs"
                   alt="Taskbar" 
                   src="<?php echo get_template_directory_uri() . '/images/taskbar.png'; ?>"
@@ -100,7 +100,7 @@ get_header(); ?>
 
     <div class="small-12 small-centered columns text-center">
       <h4>Get it now for $1! </h4>
-      <a class="button success radius bottom-buy" 
+      <a class="button success radius" 
       	href=<?php echo "\"".home_url()."/downloads/caps-lock-notification/\""; ?>>Buy</a>
     </div>
 

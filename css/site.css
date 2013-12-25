@@ -17,9 +17,6 @@ Version: 1.0
 } /* Define mobile styles */
 
 @media only screen and (max-width: 40em) {
-	.header-title {
-	}
-
 	.header-links {
 		margin-right: 1em;
 	}
@@ -30,6 +27,10 @@ Version: 1.0
 
 	.about-panel {
 		margin-top: 10px;
+	}	
+
+	.edd_download {
+		width: 100% !important; 
 	}
 } 
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
@@ -51,6 +52,10 @@ Version: 1.0
 	.about-panel {
 		margin-top: 10px;
 	}
+	
+	.edd_download {
+		width: 66% !important; 
+	}
 } 
 /* min-width 641px, medium screens */
 
@@ -70,6 +75,10 @@ Version: 1.0
 	.about-panel {
 		margin-top: 10px;
 	}
+	
+	.edd_download {
+		width: 66% !important; 
+	}
 } 
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 
@@ -82,6 +91,10 @@ Version: 1.0
 	.header-title-link {
 		font-size: 3em;
 	}
+	
+	.edd_download {
+		width: 33% !important; 
+	}
 } 
 /* min-width 1025px, large screens */
 
@@ -92,6 +105,10 @@ Version: 1.0
 
 	.header-title-link {
 		font-size: 3em;
+	}
+	
+	.edd_download {
+		width: 33% !important; 
 	}
 } 
 /* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
@@ -105,6 +122,10 @@ Version: 1.0
 	.header-title-link {
 		font-size: 3.2em;
 	}
+	
+	.edd_download {
+		width: 33% !important; 
+	}
 } 
 /* min-width 1441px, xlarge screens */
 
@@ -115,6 +136,10 @@ Version: 1.0
 
 	.header-title-link {
 		font-size: 3.2em;
+	}
+	
+	.edd_download {
+		width: 33% !important; 
 	}
 } 
 /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
@@ -129,6 +154,10 @@ Version: 1.0
 	.header-title-link {
 		font-size: 3.5em;
 	}
+	
+	.edd_download {
+		width: 33% !important; 
+	}
 } 
 /* min-width 1921px, xlarge screens */
 
@@ -140,6 +169,10 @@ Version: 1.0
 
 	.header-title-link {
 		font-size: 3.5em;
+	}
+	
+	.edd_download {
+		width: 33% !important; 
 	}
 } 
 /* min-width 1921px, xlarge screens */
@@ -196,15 +229,7 @@ Version: 1.0
 	outline: none;
 }
 
-/*
-.bottom-buy {
-	width: 11em;
-}
-
-.somerton-title {
-	font-weight: normal;
-}
-
+/* Shop page */
 
 .shop-title {
 	margin-bottom: 2em !important;
@@ -226,12 +251,4 @@ Version: 1.0
     max-width: 420px;
     width: auto!important;
     height: auto!important;
-}
-
-.site-imgs {
-	height: 134px;
-}
-
-.pics {
-	outline: none;
 }
