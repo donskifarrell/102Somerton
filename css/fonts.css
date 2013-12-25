@@ -6,7 +6,7 @@ Fonts for use with 102Somerton site
 */
 
 @font-face  {
-   font-family:'Baron';
+   font-family: "Baron";
    src:url("../fonts/baron/BaronNeueItalic.eot");
    src: local('☺'),
       url("../fonts/baron/BaronNeueItalic.eot?#iefix") format("embedded-opentype"),

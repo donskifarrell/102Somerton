@@ -7,10 +7,9 @@ Description: Theme for 102Somerton company site
 Version: 1.0
 */
 
-#wpadminbar {
+/*#wpadminbar {
 	display: none;
-}
-
+}*/
 
 // Small screens
 @media only screen { 
@@ -161,7 +160,8 @@ Version: 1.0
 }
 
 .header-somerton {
-	color: darksalmon;
+	color: maroon;
+	// color: darksalmon;
 }
 
 /* Menu Items */
