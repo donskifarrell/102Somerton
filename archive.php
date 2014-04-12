@@ -1,102 +1,92 @@
 <?php
-/**
- * The template for displaying Archive pages.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package 102Somerton
- */
+// File Security Check
+if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+    die ( 'You do not have sufficient permissions to access this page!' );
+}
+?>
+<?php get_header(); ?>
+    
+    <div id="content" class="col-full">
+    	
+    	<?php woo_main_before(); ?>
+    	
+		<section id="main" class="col-left"> 
 
-get_header(); ?>
+		<?php if (have_posts()) : $count = 0; ?>
+        
+            <?php if (is_category()) { ?>
+        	<header class="archive-header">
+        		<h1><?php _e( 'Archive', 'woothemes' ); ?> / <?php single_cat_title( '', true ); ?></h1> 
+        		<span class="archive-rss"><?php $cat_id = get_cat_ID( single_cat_title( '', false ) ); echo '<a href="' . get_category_feed_link( $cat_id, '' ) . '">' . __( 'RSS feed for this section', 'woothemes' ) . '</a>'; ?></span>
+        	</header>        
+        
+            <?php } elseif (is_day()) { ?>
+            <header class="archive-header">
+            	<h1><?php _e( 'Archive', 'woothemes' ); ?> / <?php the_time( get_option( 'date_format' ) ); ?></h1>
+            </header>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+            <?php } elseif (is_month()) { ?>
+            <header class="archive-header">
+            	<h1><?php _e( 'Archive', 'woothemes' ); ?> / <?php the_time( 'F, Y' ); ?></h1>
+            </header>
 
-		<?php if ( have_posts() ) : ?>
+            <?php } elseif (is_year()) { ?>
+            <header class="archive-header">
+            	<h1><?php _e( 'Archive', 'woothemes' ); ?> / <?php the_time( 'Y' ); ?></h1>
+            </header>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-						if ( is_category() ) :
-							single_cat_title();
+            <?php } elseif (is_author()) { ?>
+            <header class="archive-header">
+            	<h1><?php _e( 'Archive by Author', 'woothemes' ); ?></h1>
+            </header>
 
-						elseif ( is_tag() ) :
-							single_tag_title();
+            <?php } elseif (is_tag()) { ?>
+            <header class="archive-header">
+            	<h1><?php _e( 'Tag Archives:', 'woothemes' ); ?> <?php single_tag_title( '', true ); ?></h1>
+            </header>
+            
+            <?php } ?>
 
-						elseif ( is_author() ) :
-							/* Queue the first post, that way we know
-							 * what author we're dealing with (if that is the case).
-							*/
-							the_post();
-							printf( __( 'Author: %s', '102Somerton' ), '<span class="vcard">' . get_the_author() . '</span>' );
-							/* Since we called the_post() above, we need to
-							 * rewind the loop back to the beginning that way
-							 * we can run the loop properly, in full.
-							 */
-							rewind_posts();
-
-						elseif ( is_day() ) :
-							printf( __( 'Day: %s', '102Somerton' ), '<span>' . get_the_date() . '</span>' );
-
-						elseif ( is_month() ) :
-							printf( __( 'Month: %s', '102Somerton' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', '102Somerton' ) ) . '</span>' );
-
-						elseif ( is_year() ) :
-							printf( __( 'Year: %s', '102Somerton' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', '102Somerton' ) ) . '</span>' );
-
-						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', '102Somerton' );
-
-						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', '102Somerton');
-
-						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', '102Somerton' );
-
-						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', '102Somerton' );
-
-						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', '102Somerton' );
-
-						else :
-							_e( 'Archives', '102Somerton' );
-
-						endif;
-					?>
-				</h1>
-				<?php
-					// Show an optional term description.
-					$term_description = term_description();
-					if ( ! empty( $term_description ) ) :
-						printf( '<div class="taxonomy-description">%s</div>', $term_description );
-					endif;
-				?>
-			</header><!-- .page-header -->
-
+        <?php
+        	// Display the description for this archive, if it's available.
+        	woo_archive_description();
+        ?>
+        
+	        <div class="fix"></div>
+        
+        	<?php woo_loop_before(); ?>
+        	
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); $count++; ?>
 
 				<?php
 					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
+					 * If you want to overload this in a child theme then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
 					get_template_part( 'content', get_post_format() );
 				?>
 
 			<?php endwhile; ?>
+            
+	        <?php else: ?>
+	        
+	            <article <?php post_class(); ?>>
+	                <p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ); ?></p>
+	            </article><!-- /.post -->
+	        
+	        <?php endif; ?>  
+	        
+	        <?php woo_loop_after(); ?>
+    
+			<?php woo_pagenav(); ?>
+                
+		</section><!-- /#main -->
+		
+		<?php woo_main_after(); ?>
 
-			<?php Theme_102Somerton_paging_nav(); ?>
+        <?php get_sidebar(); ?>
 
-		<?php else : ?>
-
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php endif; ?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
-<?php get_sidebar(); ?>
+    </div><!-- /#content -->
+		
 <?php get_footer(); ?>

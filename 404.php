@@ -1,33 +1,34 @@
 <?php
-/**
- * The template for displaying 404 pages (Not Found).
- *
- * @package 102Somerton
- */
+// File Security Check
+if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+    die ( 'You do not have sufficient permissions to access this page!' );
+}
+?>
+<?php get_header(); ?>
+       
+    <div id="content" class="col-full">
+    	
+    	<?php woo_main_before(); ?>
+    
+		<section id="main" class="col-left">
+                                                                                
+            <div class="page">
+				
+				<header>
+                	<h1><?php _e( 'Error 404 - Page not found!', 'woothemes' ); ?></h1>
+                </header>
+                <section class="entry">
+                	<p><?php _e( 'The page you trying to reach does not exist, or has been moved. Please use the menus or the search box to find what you are looking for.', 'woothemes' ); ?></p>
+                </section>
 
-get_header(); ?>
+            </div><!-- /.post -->
+                                                
+        </section><!-- /#main -->
+        
+        <?php woo_main_after(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+        <?php get_sidebar(); ?>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', '102Somerton' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the buttons below?', '102Somerton' ); ?></p>
-
-					<ul class="inline-list">
-					  <li><a class="button secondary" href=<?php echo "\"".home_url()."\""; ?>>Home</a></li>
-					  <li><a class="button secondary" href="<?php echo get_permalink( get_page_by_path( 'shop' ) ); ?>">Shop</a></li>
-					  <li><a class="button secondary" href="<?php echo get_permalink( get_page_by_path( 'about-contact-us' ) ); ?>">About Us</a></li>
-					</ul>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+    </div><!-- /#content -->
+		
 <?php get_footer(); ?>

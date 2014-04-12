@@ -1,33 +1,33 @@
 <?php
-/**
- * The Sidebar containing the main widget areas.
- *
- * @package 102Somerton
- */
+// File Security Check
+if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+    die ( 'You do not have sufficient permissions to access this page!' );
+}
 ?>
-	<div id="secondary" class="widget-area" role="complementary">
-		<?php do_action( 'before_sidebar' ); ?>
-		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
+<?php 
+/**
+ * Sidebar Template
+ *
+ * If a `primary` widget area is active and has widgets, display the sidebar.
+ *
+ * @package WooFramework
+ * @subpackage Template
+ */
+	global $woo_options;
+	
+	if ( isset( $woo_options['woo_layout'] ) && ( $woo_options['woo_layout'] != 'layout-full' ) ) {
+?>	
+<aside id="sidebar" class="col-right">
 
-			<aside id="search" class="widget widget_search">
-				<?php get_search_form(); ?>
-			</aside>
+	<?php woo_sidebar_inside_before(); ?>
 
-			<aside id="archives" class="widget">
-				<h1 class="widget-title"><?php _e( 'Archives', '102Somerton' ); ?></h1>
-				<ul>
-					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
-				</ul>
-			</aside>
-
-			<aside id="meta" class="widget">
-				<h1 class="widget-title"><?php _e( 'Meta', '102Somerton' ); ?></h1>
-				<ul>
-					<?php wp_register(); ?>
-					<li><?php wp_loginout(); ?></li>
-					<?php wp_meta(); ?>
-				</ul>
-			</aside>
-
-		<?php endif; // end sidebar widget area ?>
-	</div><!-- #secondary -->
+	<?php if ( woo_active_sidebar( 'primary' ) ) { ?>
+    <div class="primary">
+		<?php woo_sidebar( 'primary' );  ?>
+	</div>        
+	<?php } // End IF Statement ?>   
+	
+	<?php woo_sidebar_inside_after(); ?> 
+	
+</aside><!-- /#sidebar -->
+<?php } // End IF Statement ?>
