@@ -45,12 +45,23 @@ foreach ( $includes as $i ) {
 /*-----------------------------------------------------------------------------------*/
 
 
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+ 
+function custom_override_checkout_fields( $fields ) {
+    $fields['order']['order_comments']['placeholder'] = '';
+    $fields['order']['order_comments']['label'] = '';
 
-
-
-
-
-
+    unset($fields['billing']['billing_address_1']);
+    unset($fields['billing']['billing_address_2']);
+    unset($fields['billing']['billing_city']);
+    unset($fields['billing']['billing_postcode']);
+    unset($fields['billing']['billing_state']);
+    unset($fields['billing']['billing_phone']);
+    unset($fields['billing']['billing_address_2']);
+    unset($fields['billing']['billing_postcode']);
+    unset($fields['billing']['billing_city']);
+    return $fields;
+}
 
 
 /*-----------------------------------------------------------------------------------*/
